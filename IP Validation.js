@@ -11,6 +11,11 @@ function isValidIP(str) {
   for (var i = 0; i < 4; i++) {
     var octet = octets[i];
     
+    // Check that the octet is not empty
+    if (octet === "") {
+      return false;
+    }
+    
     // Check that the octet is a number between 0 and 255
     if (isNaN(octet) || parseInt(octet) < 0 || parseInt(octet) > 255) {
       return false;
@@ -18,6 +23,11 @@ function isValidIP(str) {
     
     // Check that the octet doesn't have leading zeros, except for 0 itself
     if (octet.length > 1 && octet[0] === "0") {
+      return false;
+    }
+    
+    // Check that the octet consists only of digits
+    if (/[^0-9]/.test(octet)) {
       return false;
     }
   }
