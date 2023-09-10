@@ -1,3 +1,5 @@
+import Leetcode.topQuestions.ListNode;
+
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists==null || lists.length==0) return null;
