@@ -8,8 +8,8 @@ class InvertBinaryTree {
             return root;
         }
 
-        invertTree(root,left);
-        invertTree(root,right);
+        invertTree(root.left);
+        invertTree(root.right);
         TreeNode curr = root.left;
         root.left = root.right;
         root.right = curr;

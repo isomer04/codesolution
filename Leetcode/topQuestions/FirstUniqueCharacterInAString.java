@@ -12,14 +12,10 @@ public class Solution {
         }
         
         for (int i = 0; i < s.length(); i++) {
-              System.out.println("===================");
-                System.out.println(freq[s.charAt(i) - 'a' ] + " freq[s.charAt(i) - 'a']");
+             
             if (freq[s.charAt(i) - 'a'] == 1) {
-                System.out.println("===================");
-                System.out.println(Arrays.toString(freq) + " at i=" + i);
                
-
-                System.out.println("First non-repeating character found: " + s.charAt(i)); // Debug statement
+                
                 return i;
             }
         }

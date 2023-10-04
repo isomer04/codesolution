@@ -1,5 +1,4 @@
 package Leetcode.Grind;
-
 import java.util.Stack;
 
 class Solution {
